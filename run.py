@@ -1,5 +1,5 @@
 import os
-iport json
+import json
 from flask import Flask, render_template
 
 
@@ -15,8 +15,8 @@ def index():
 def about():
     data = []
     with open("data/company.json", "r") as json_data:
-        dat = jsao.load(json_data)
-    return render_template("about.html", page_title="About", company = data)
+        data = json.load(json_data)
+    return render_template("about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
